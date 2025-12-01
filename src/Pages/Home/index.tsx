@@ -1,6 +1,7 @@
 import { BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import styles from './home.module.css'
+import "../../index.css";
 
 export function Home() {
     return (
@@ -30,7 +31,7 @@ export function Home() {
                 <tbody>
                     <tr className={styles.tr}>
 
-                        <td className={styles.td} data-label="Moeda">
+                        <td className={styles.tdLabel} data-label="Moeda">
                             <div className={styles.name}>
                                 <Link to="/Detail/bitcoin">
                                     <span>Bitcoin</span> | BTC
@@ -38,19 +39,19 @@ export function Home() {
                             </div>
                         </td>
 
-                        <td className={styles.td} data-label="Valor Mercado">
+                        <td className={styles.tdLabel} data-label="Valor Mercado">
                             1T
                         </td>
 
-                        <td className={styles.td} data-label="Preço">
+                        <td className={styles.tdLabel} data-label="Preço">
                             6.000
                         </td>
 
-                        <td className={styles.td} data-label="Volume">
+                        <td className={styles.tdLabel} data-label="Volume">
                             2B
                         </td>
 
-                        <td className={styles.td} data-label="Mudança 24h">
+                        <td className={styles.tdProfit} data-label="Mudança 24h">
                             <span>1.20%</span>
                         </td>
 
