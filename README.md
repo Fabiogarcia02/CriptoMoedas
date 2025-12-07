@@ -10,13 +10,13 @@ Uma aplicação web moderna e responsiva para rastreamento de criptomoedas em te
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f205e467-05b1-4633-b918-6af3437492bb" alt="Home Page Desktop" width="700"/>
+  <img src="https://github.com/user-attachments/assets/03c6a389-4990-4952-a02b-e2322085c8a0" alt="Home Page Mobile" width="700"/>
   <br/>
-  <em>Interface Desktop: Listagem e Busca</em>
+  <em>Interface Principal (Home Page) - Layout de Cards Responsivos</em>
   <br/><br/>
-  <img src="https://github.com/user-attachments/assets/07c08aff-d43d-4805-af74-aeaf75e85b3c](https://github.com/user-attachments/assets/03c6a389-4990-4952-a02b-e2322085c8a0" alt="Pagina Detalhes" width="300"/>
+  <img src="https://github.com/user-attachments/assets/f205e467-05b1-4633-b918-6af3437492bb" alt="Página de Detalhes Desktop" width="300"/>
   <br/>
-  <em>Interface Mobile: Cards Responsivos e Página de Detalhes</em>
+  <em>Interface Página de Detalhes</em>
 </div>
 
 ## 🚀 Funcionalidades
@@ -29,7 +29,8 @@ Uma aplicação web moderna e responsiva para rastreamento de criptomoedas em te
   - Variação de 24h (com indicadores visuais de lucro/prejuízo).
   - Máximas e Mínimas do dia.
   - Volume total e Capitalização de mercado.
-- **Design Responsivo:** - **Desktop:** Tabela completa com colunas detalhadas.
+- **Design Responsivo:**
+  - **Desktop:** Tabela completa com colunas detalhadas.
   - **Mobile:** Layout se transforma automaticamente em Cards para melhor experiência de uso.
 - **Dark Mode UI:** Interface moderna com tema escuro e elementos translúcidos.
 
@@ -49,4 +50,3 @@ Pré-requisitos: Você precisa ter o [Node.js](https://nodejs.org/) instalado em
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/Fabiogarcia02/CriptoMoedas.git](https://github.com/Fabiogarcia02/CriptoMoedas.git)
-
