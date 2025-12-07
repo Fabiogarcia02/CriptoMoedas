@@ -1,157 +1,143 @@
 .container {
-  margin: 0 14px;
-  margin-top: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
 .form {
-  width: 100%;
   display: flex;
-  gap: 14px;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .form input {
-  width: 100%;
-  height: 44px;
-  border: 0;
-  padding: 0 8px;
-  border-radius: 4px;
-  outline: none;
+  flex: 1;
+  height: 46px;
+  background: #1b1f24;
+  border: 1px solid #2a2f35;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.form input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.4);
 }
 
 .form button {
-  background: transparent;
+  background: #4a90e2;
+  border: none;
+  width: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+.form button:hover {
+  background: #357ac7;
+}
+
+/* ---- Tabela ---- */
 
 table {
-  border-collapse: separate;
-  border-spacing: 0 14px;
-  margin: 0;
-  padding: 0;
   width: 100%;
-  table-layout: fixed;
+  border-collapse: collapse;
+  background: #1b1f24;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-table caption {
-  font-size: 16px;
-  margin: 0.5em 0.75em;
+thead {
+  background: #23282e;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #18171c;
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  font-size: 16px;
-  font-family: sans-serif;
-}
-
-button {
-  cursor: pointer;
-  border: 0;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.tr {
-  background-color: #1d1c20;
-}
-
-td:first-child,
-th:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-td:last-child,
-th:last-child {
-  border-radius: 0 8px 8px 0;
+thead th {
   padding: 14px;
-  text-align: center;
-}
-img{
-    margin-top: 40px;
- margin-left: 350px;
-}
-
-.tdLabel{
-    font-weight: bold;
-    font-size: 18px;
-    color:#FFF
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #cfcfcf;
 }
 
-.tdProfit{
-    color:rgb(4, 138, 48);
-        font-weight: bold;
-
-}
-th{
-    color:#FFF
+tbody tr {
+  border-bottom: 1px solid #2a2f35;
 }
 
-.tdLoss{
-    color: rgb(102, 4, 4);
-    font-weight: bold;
+.tr:hover {
+  background: #23282e;
+  transition: 0.3s;
 }
 
-@media screen and (max-width:660px) {
-    table{
-        border:0;
-    }
-    table thead{
-            border: none;
-            clip:rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            position: absolute;
-            width: 1px;
-            padding:0;
-    }
-    .tr{
-        border-bottom: 1px solid #DDD;
-        display: block;
-        margin-bottom: 14px;
-    }
-    table td{
-        border-bottom: 1px solid rgba(221, 221, 221,0.170);
-        text-align: right;
-        font-size: 14px;
-
-
-    }
-    table td::before{
-        content: attr(data-Label);
-        float:left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    table td:last-child {
-            border-bottom: 0;
-
-    }
-    td:first-child,
-th:first-child {
-  border-radius: 0;
+td {
+  padding: 16px;
+  font-size: 15px;
 }
 
-td:last-child,
-th:last-child {
-  border-radius:  0;
+.name {
+  display: flex;
+  gap: 5px;
+}
+
+.name a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.name a:hover {
+  color: #4a90e2;
+}
+
+/* Lucro e prejuízo */
+.tdProfit span {
+  color: #3bd27f;
+  font-weight: 600;
+}
+
+.tdLoss span {
+  color: #e05a5a;
+  font-weight: 600;
+}
+
+/* Botão carregar mais */
+.buttonMore {
+  margin: 20px auto 0;
+  display: block;
+  background: #4a90e2;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.buttonMore:hover {
+  background: #357ac7;
+}
+.name {
+  display: flex;
+  align-items: center; /* Isso alinha o texto verticalmente com a imagem */
+  gap: 10px; /* Um pequeno espaço entre a imagem e o nome */
+}
+
+.logo {
+  /* Define um tamanho fixo para as imagens não "explodirem" */
+  width: 35px;
+  height: 35px;
   
-}
-}
-.buttonMore{
-   background-color: aqua;
-   padding: 8px 24px;
-   color: rgb(12, 12, 12);
-   margin: 14px 0;
-   border-radius: 8px;
+  /* Garante que a imagem não fique esticada se não for quadrada */
+  object-fit: contain; 
+  
+  /* Opcional: Deixa a imagem redondinha, fica mais bonito */
+  border-radius: 50%; 
 }

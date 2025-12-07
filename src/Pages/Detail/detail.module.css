@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    width: 100%;
+    max-width: 1024px;
+    margin: 40px auto 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.content {
+    background-color: #f3f3f3; /* Fundo cinza claro */
+    width: 100%;
+    margin-top: 24px;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: #000;
+}
+
+.logo {
+    width: 100px; /* Tamanho da imagem grande */
+    height: 100px;
+    object-fit: contain;
+    align-self: center;
+    margin-bottom: 14px;
+}
+
+.profit {
+    color: green;
+    font-weight: bold;
+}
+
+.loss {
+    color: red;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 14px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card span {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
