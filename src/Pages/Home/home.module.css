@@ -126,18 +126,15 @@ td {
 }
 .name {
   display: flex;
-  align-items: center; /* Isso alinha o texto verticalmente com a imagem */
-  gap: 10px; /* Um pequeno espaço entre a imagem e o nome */
+  align-items: center; 
+  gap: 10px; 
 }
 
 .logo {
-  /* Define um tamanho fixo para as imagens não "explodirem" */
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   
-  /* Garante que a imagem não fique esticada se não for quadrada */
   object-fit: contain; 
   
-  /* Opcional: Deixa a imagem redondinha, fica mais bonito */
   border-radius: 50%; 
 }

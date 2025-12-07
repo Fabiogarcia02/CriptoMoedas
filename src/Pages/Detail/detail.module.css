@@ -1,75 +1,159 @@
+/* detail.module.css */
+
+/* Animação suave de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 14px;
-    width: 100%;
-    max-width: 1024px;
-    margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  color: #fff; /* Texto branco */
+  animation: fadeIn 0.5s ease-out;
 }
 
-.center {
-    text-align: center;
+/* Cabeçalho com o nome e simbolo */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.header h3 {
+  font-size: 1.2rem;
+  color: #a0a0a0; /* Cinza claro */
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* O cartão principal */
 .content {
-    background-color: #f3f3f3; /* Fundo cinza claro */
-    width: 100%;
-    margin-top: 24px;
-    border-radius: 8px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    color: #000;
+  background-color: #1a1b1f; /* Fundo escuro */
+  border: 1px solid #333;
+  width: 100%;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Sombra forte */
 }
 
+/* Imagem da moeda */
 .logo {
-    width: 100px; /* Tamanho da imagem grande */
-    height: 100px;
-    object-fit: contain;
-    align-self: center;
-    margin-bottom: 14px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  align-self: center;
+  border-radius: 50%;
+  background: #fff; /* Fundo branco para logos transparentes */
+  padding: 4px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Informações de Preço */
+.priceInfo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.currentPrice {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.deltaBox {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 8px;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .profit {
-    color: green;
-    font-weight: bold;
+  color: #00ff88; /* Verde neon */
 }
 
 .loss {
-    color: red;
-    font-weight: bold;
+  color: #ff4d4d; /* Vermelho neon */
 }
 
+/* Grid de cards menores */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    padding: 14px;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background: #25262b; /* Um pouco mais claro que o fundo */
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #444;
 }
 
 .card span {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Responsividade para celular */
+.card strong {
+  font-size: 1.1rem;
+  color: #eee;
+}
+
+/* Loading */
+.loading {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+/* Responsividade */
 @media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+  .currentPrice {
+    font-size: 2.2rem;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+h3{
+    margin-bottom: 30px;
 }
