@@ -1,16 +1,34 @@
+import { useState, type FormEvent } from "react";
 import { BsSearch } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import styles from './home.module.css'
+import { Link, useNavigate} from "react-router-dom";
+import styles from "./home.module.css";
 import "../../index.css";
 
 export function Home() {
+
+    const [input, setInput] = useState("");
+    const navigate = useNavigate();
+    function handleSubmit(event: FormEvent) {
+        event.preventDefault();
+        if(input ===""){
+            return;
+        }else{
+            navigate(`/Detail/${input}`)
+        }
+    }
+
+    function mostramais(){
+        
+    }
+
     return (
         <main className={styles.container}>
-
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="Digite o nome da moeda"
+                    value={input}
+                    onChange={(event) => setInput(event.target.value)}
                 />
                 <button type="submit">
                     <BsSearch size={30} color="#FFF" />
@@ -30,7 +48,6 @@ export function Home() {
 
                 <tbody>
                     <tr className={styles.tr}>
-
                         <td className={styles.tdLabel} data-label="Moeda">
                             <div className={styles.name}>
                                 <Link to="/Detail/bitcoin">
@@ -38,27 +55,18 @@ export function Home() {
                                 </Link>
                             </div>
                         </td>
-
-                        <td className={styles.tdLabel} data-label="Valor Mercado">
-                            1T
-                        </td>
-
-                        <td className={styles.tdLabel} data-label="Preço">
-                            6.000
-                        </td>
-
-                        <td className={styles.tdLabel} data-label="Volume">
-                            2B
-                        </td>
-
+                        <td className={styles.tdLabel} data-label="Valor Mercado">1T</td>
+                        <td className={styles.tdLabel} data-label="Preço">6.000</td>
+                        <td className={styles.tdLabel} data-label="Volume">2B</td>
                         <td className={styles.tdProfit} data-label="Mudança 24h">
                             <span>1.20%</span>
                         </td>
-
                     </tr>
                 </tbody>
             </table>
 
+            <button   onClick={mostramais}
+              className= {styles.buttonMore}>Carregar mais</button>
         </main>
     );
 }
