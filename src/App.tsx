@@ -1,11 +1,11 @@
-import "./App.css";
-import "./index.css";
+import "./App.css"; // Se existir
+// import "./index.css"; // Remova se já estiver no main.tsx
 
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
 
-function App() {
+// Mude de 'function App' para 'export function App'
+export function App() {
   return <RouterProvider router={router} />;
 }
 
-export default App;
