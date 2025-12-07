@@ -6,14 +6,16 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* ---- Formulário ---- */
 .form {
   display: flex;
   gap: 10px;
   margin-bottom: 25px;
+  width: 100%;
 }
 
 .form input {
-  flex: 1;
+  flex: 1; /* Ocupa todo o espaço possível */
   height: 46px;
   background: #1b1f24;
   border: 1px solid #2a2f35;
@@ -22,17 +24,20 @@
   font-size: 16px;
   color: #fff;
   transition: 0.3s;
+  min-width: 0; /* Evita que o input quebre o layout em telas minúsculas */
 }
 
 .form input:focus {
   border-color: #4a90e2;
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.4);
+  outline: none;
 }
 
 .form button {
   background: #4a90e2;
   border: none;
   width: 55px;
+  flex-shrink: 0; /* Garante que o botão não encolha demais */
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -45,14 +50,13 @@
   background: #357ac7;
 }
 
-/* ---- Tabela ---- */
-
+/* ---- Tabela Desktop (Padrão) ---- */
 table {
   width: 100%;
   border-collapse: collapse;
   background: #1b1f24;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: hidden; /* Arredonda as bordas da tabela */
 }
 
 thead {
@@ -79,62 +83,156 @@ tbody tr {
 td {
   padding: 16px;
   font-size: 15px;
+  vertical-align: middle;
 }
 
+/* ---- Estilos da Moeda (Logo e Nome) ---- */
 .name {
   display: flex;
-  gap: 5px;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 35px; /* Reduzi levemente para ficar harmônico */
+  height: 35px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .name a {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
+  display: flex;
+  flex-direction: column; /* Em telas pequenas, simbolo pode ir para baixo do nome se quiser */
+  line-height: 1.2;
+}
+
+.name a span {
+  font-size: 16px;
 }
 
 .name a:hover {
   color: #4a90e2;
 }
 
-/* Lucro e prejuízo */
+/* ---- Cores de Lucro/Prejuízo ---- */
 .tdProfit span {
   color: #3bd27f;
   font-weight: 600;
+  background: rgba(59, 210, 127, 0.1); /* Fundo suave opcional */
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .tdLoss span {
   color: #e05a5a;
   font-weight: 600;
+  background: rgba(224, 90, 90, 0.1); /* Fundo suave opcional */
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
-/* Botão carregar mais */
+/* ---- Botão Carregar Mais ---- */
 .buttonMore {
-  margin: 20px auto 0;
+  margin: 30px auto 40px; /* Mais espaço embaixo */
   display: block;
   background: #4a90e2;
-  padding: 12px 25px;
+  padding: 14px 30px;
   border-radius: 10px;
   border: none;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   color: #fff;
   transition: 0.3s;
+  width: 100%;
+  max-width: 200px; /* Limita a largura em telas grandes */
 }
 
 .buttonMore:hover {
   background: #357ac7;
-}
-.name {
-  display: flex;
-  align-items: center; 
-  gap: 10px; 
+  transform: translateY(-2px);
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  
-  object-fit: contain; 
-  
-  border-radius: 50%; 
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE)
+   Transforma a tabela em Cards quando a tela for menor que 720px
+   ========================================================================== */
+@media (max-width: 720px) {
+  .container {
+    padding: 20px 15px; /* Menos padding lateral no celular */
+  }
+
+  /* Esconde o cabeçalho da tabela (Moeda, Preço, etc) */
+  thead {
+    display: none;
+  }
+
+  table, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* Transforma a linha em um Cartão */
+  tbody tr {
+    background: #1b1f24;
+    border: 1px solid #2a2f35;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Ajusta as células */
+  td {
+    text-align: right; /* Conteúdo alinhado à direita */
+    padding-left: 50%; /* Espaço para o rótulo */
+    position: relative;
+    border-bottom: 1px solid #2a2f35;
+    display: flex;
+    justify-content: space-between; /* Separa rótulo do valor */
+    align-items: center;
+  }
+
+  /* Cria o rótulo baseado no atributo data-label do HTML */
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #888;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  /* --- Tratamento especial para a primeira célula (Nome/Logo) --- */
+  td:first-child {
+    background: #23282e; /* Cabeçalho do card mais escuro */
+    justify-content: center; /* Centraliza */
+    padding: 15px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  /* Esconde o label "Moeda" no card, pois já é óbvio */
+  td:first-child::before {
+    display: none;
+  }
+
+  .name {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .name a {
+    font-size: 18px; /* Nome maior no mobile */
+  }
+
+  .logo {
+    width: 45px; /* Logo maior no mobile */
+    height: 45px;
+  }
+
+  /* Última borda não precisa aparecer */
+  td:last-child {
+    border-bottom: none;
+  }
 }
