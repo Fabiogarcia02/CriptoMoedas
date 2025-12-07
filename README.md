@@ -10,13 +10,16 @@ Uma aplicação web moderna e responsiva para rastreamento de criptomoedas em te
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/03c6a389-4990-4952-a02b-e2322085c8a0" alt="Home Page Mobile" width="700"/>
+    <em>Interface Principal (Home Page) - Layout de Cards Responsivos</em>
+  <img src="[https://github.com/user-attachments/assets/03c6a389-4990-4952-a02b-e2322085c8a0](https://github.com/user-attachments/assets/1b3fe603-54ca-4cce-acfb-4778201ff3f5)" alt="Home Page Mobile" width="700"/>
   <br/>
-  <em>Interface Principal (Home Page) - Layout de Cards Responsivos</em>
+  
+
   <br/><br/>
 
   <br/>
   <em>Interface Página de Detalhes</em>
+  <br/>
     <img src="https://github.com/user-attachments/assets/f205e467-05b1-4633-b918-6af3437492bb" alt="Página de Detalhes Desktop" width="300"/>
 </div>
 
@@ -51,4 +54,5 @@ Pré-requisitos: Você precisa ter o [Node.js](https://nodejs.org/) instalado em
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/Fabiogarcia02/CriptoMoedas.git](https://github.com/Fabiogarcia02/CriptoMoedas.git)
+
 
