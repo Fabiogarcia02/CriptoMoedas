@@ -10,8 +10,9 @@ Uma aplicação web moderna e responsiva para rastreamento de criptomoedas em te
 ## 📸 Screenshots
 
 <div align="center">
-    <em>Interface Principal (Home Page) - Layout de Cards Responsivos</em>
-  <img src="[https://github.com/user-attachments/assets/03c6a389-4990-4952-a02b-e2322085c8a0](https://github.com/user-attachments/assets/1b3fe603-54ca-4cce-acfb-4778201ff3f5)" alt="Home Page Mobile" width="700"/>
+    <em>Interface Principal (Home Page) - Layout de Cards Responsivos</em> <br/> <br/>
+<img width="1344" height="624" alt="image" src="https://github.com/user-attachments/assets/6dc0bead-1314-4985-9700-d4abe38fa70f" />
+
   <br/>
   
 
